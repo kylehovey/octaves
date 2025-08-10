@@ -12,9 +12,10 @@ def f(n):
 
 destinations = []
 count = 1000000
+num_bins = 1000
 
 # Change this to plot the output
-plot_output = True
+plot_output = False
 
 if __name__ == "__main__":
     # Progress bar for the iteration
@@ -27,7 +28,6 @@ if __name__ == "__main__":
     fraction_values = sorted(float(x) for x in destinations)
 
     # Histogram data
-    num_bins = 100
     hist, bin_edges = np.histogram(fraction_values, bins=num_bins, range=(0, 1), density=False)
     heatmap_data = hist.reshape(1, -1)  # For horizontal heatmap
 
