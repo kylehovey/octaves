@@ -3,7 +3,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 from tqdm import tqdm
 
-scale = log2(3/2)
+r = 3/2
+scale = log2(r)
 
 def f(n):
     alpha = n * scale
