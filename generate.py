@@ -3,16 +3,18 @@ import matplotlib.pyplot as plt
 import numpy as np
 from tqdm import tqdm
 
-scale = log2(3)
+scale = log2(3/2)
 
 def f(n):
-    return 3**n / 2**floor(n*scale) - 1
+    alpha = n * scale
+    alpha = alpha - floor(alpha)
+    return 2**alpha - 1
 
 destinations = []
-count = 30000
+count = 1000000
 
 # Change this to plot the output
-plot_output = False
+plot_output = True
 
 if __name__ == "__main__":
     # Progress bar for the iteration
